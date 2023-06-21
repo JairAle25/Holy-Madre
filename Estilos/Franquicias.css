@@ -1,0 +1,247 @@
+:root{
+    --ColorPrincipal:#6cace4;
+    --ColorBlanco:#ffffff;
+    --ColorNegro:#000000;
+    --ColorDetalles:#89391f;
+    --colorSecundario:#ffcc00;
+}
+@media(max-width:7000px) {
+    .Franquicias{
+        width: 90%;
+        /* height: 250vh; */
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        animation: difuminado 2s ease;
+    }
+    .contInfoFranq{
+        /* height: 230vh; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .contInfoFranq .titulo{
+        font-size: 3.1rem;
+        color:var(--ColorPrincipal) ;
+        font-weight: 600;
+        padding-bottom: 1rem;
+        padding-top: 2rem;
+    }
+    .contInfoFranq span{
+        color: var(--colorSecundario);
+    }
+    .ContVideos{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+
+    }
+    .ContVideos video{
+        border-radius: 10px;
+        width: 17%;
+    }
+    .contInfoFranq .pregunta{
+        font-size: 2.3rem;
+        color:var(--ColorPrincipal) ;
+        font-weight: 600;
+        padding: 1rem 0;
+    }
+    .contInfoFranq h2{
+        font-size: 1.8rem;
+        color: var(--colorSecundario);
+        font-weight: 600;
+        padding: 1rem 0;
+    }
+    .primerParrafo{
+        padding-top: 1.2rem;
+    }
+    .contInfoFranq p{
+        width: 70%;
+        text-align: center;
+    }
+    .contInfoFranq img{
+        width: 45%;
+        border-radius: 5px;
+    }
+    
+    .formulario{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 4rem;
+    }
+    .formulario span{
+        color: var(--ColorDetalles);
+    }
+    .formulario .label{
+        color: var(--ColorNegro);
+        padding-top: 1.2rem;
+        padding-bottom: 0.7rem;
+        font-size: 1rem;
+        font-weight: 600;
+        text-align: center;
+    }
+    .Primlabel{
+        color: var(--ColorNegro);
+        padding-bottom: 0.5rem;
+        font-size: 0.9rem;
+        font-weight: 600;
+    }
+    .formulario input[type=text],input[type=email]{
+        text-align: center;
+        width: 100%;
+        padding: 0.2rem 0;
+        border-radius: 5px;
+        border: 2px var(--ColorPrincipal) solid;
+    }
+    .formulario input[type=submit]{
+        margin-top: 1.5rem;
+        width: 35%;
+        padding: 0.4rem 0;
+        background-color: var(--ColorPrincipal);
+        color: var(--ColorBlanco);
+        border-radius: 5px;
+        font-weight: 600;
+        font-size: 1rem;
+        border:2px var(--ColorBlanco) solid;
+        margin-bottom: 2rem;
+        transition: all 0.9s ease;
+    }
+    .formulario input[type=submit]:hover{
+        background-color: var(--ColorBlanco);
+        color: var(--ColorPrincipal);
+        border:2px var(--ColorPrincipal) solid
+    }
+    @keyframes difuminado {
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+}
+@media(max-width:1024px){
+    .Franquicias{
+        width: 95%;
+        /*height: 225vh;*/
+    }
+    .contInfoFranq .titulo{
+        font-size: 3.9rem;
+        padding-top: 1.5rem;
+        padding-bottom: 1.4rem;
+    }
+    .contInfoFranq .pregunta{
+        font-size: 2.8rem;
+        padding: 1.2rem 0;
+        text-align: center;
+    }
+    .contInfoFranq h2{
+        font-size: 2.2rem;
+    }
+    .primerParrafo{
+        padding-top: 2rem;
+    }
+    .contInfoFranq p{
+        width: 90%;
+        font-size: 1.7rem;
+    }
+    .contInfoFranq img{
+        width: 80%;
+        border-radius: 5px;
+    }
+    .formulario span{
+        color: var(--ColorDetalles);
+    }
+    .formulario .label{
+        padding-top: 1.4rem;
+        font-size: 1.3rem;
+        text-align: center;
+    }
+    .Primlabel{
+        font-size: 1.3rem;
+    }
+    .formulario input[type=text],input[type=email]{
+        padding: 0.4rem 0;
+    }
+    .formulario input[type=submit]{
+        margin-top: 2rem;
+        width: 45%;
+        padding: 0.8rem 0;
+        font-size: 1.3rem;
+    }
+    .ContVideos video{
+        width: 21%;
+    }
+    
+}
+
+@media(max-width:480px){
+    .Franquicias{
+        width: 90%;
+        /* height: 355vh; */
+    }
+    .contInfoFranq .titulo{
+        font-size: 2.6rem;
+        padding-top: 1.6rem;
+        padding-bottom: 1.3rem;
+    }
+    .contInfoFranq .pregunta{
+        font-size: 2.1rem;
+        padding: 1.2rem 0;
+        text-align: center;
+    }
+    .contInfoFranq h2{
+        font-size: 2rem;
+        padding: 1.2rem 0;
+        text-align: center;
+    }
+    .primerParrafo{
+        padding-top: 1.5rem;
+    }
+    .contInfoFranq p{
+        width: 90%;
+        font-size: 1.25rem;
+    }
+    .contInfoFranq img{
+        width: 100%;
+        border-radius: 5px;
+    }
+    
+    .formulario{
+        margin-top: 3rem;
+    }
+    .formulario .label{
+        font-size: 1.1rem;
+        text-align: center;
+    }
+    .Primlabel{
+        font-size: 1.1rem;
+    }
+    .formulario input[type=text],input[type=email]{
+        padding: 0.3rem 0;
+    }
+    .formulario input[type=submit]{
+        margin-top: 2.5rem;
+        width: 60%;
+        padding: 0.6rem 0;
+        font-size: 1.2rem;
+    }
+    .formulario input[type=submit]:hover{
+        background-color: var(--ColorBlanco);
+        color: var(--ColorPrincipal);
+        border:2px var(--ColorPrincipal) solid
+    }
+    .videoResponsive{
+        display: none;
+    }
+    .ContVideos video{
+        width: 45%;
+    }
+    
+}

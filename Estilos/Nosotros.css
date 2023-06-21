@@ -1,0 +1,125 @@
+:root{
+    --ColorPrincipal:#6cace4;
+    --ColorBlanco:#ffffff;
+    --ColorNegro:#000000;
+    --ColorDetalles:#89391f;
+    --colorSecundario:#ffcc00;
+}
+@media(max-width:7000px){
+    .Nosotros{
+        display: flex;
+        width: 100%;
+    }
+    .carouselNosotros{
+        width: 35%;
+        animation: bajada 3s ease;
+    }
+    .carouselNosotros img{
+        width: 35%;
+    }
+    .TextoNosotros{
+        width: 65%;
+        margin: 0 auto;
+    }
+    .info{
+        width: 95%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        animation: difuminado 2.5s ease;
+    }
+    .info h1{
+        color: var(--ColorPrincipal);
+        font-weight: 600;
+        text-align: center;
+        font-size: 2.5rem;
+        padding-top: 2.5rem;
+        padding-bottom: 0.4rem;
+    }
+    .info p{
+        text-align: center;
+        font-size: 1rem;
+    }
+    .info span{
+        color: var(--colorSecundario);
+        font-weight: bold;
+    }
+    @keyframes bajada {
+        0%{
+            bottom:200%;
+        }
+        100%{
+            bottom: 0;
+        }
+    }
+    @keyframes difuminado{
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+    
+    }
+}
+
+@media(max-width:1024px){
+    .Nosotros{
+        flex-direction: column-reverse;
+    }
+    .carouselNosotros{
+        width: 60%;
+        animation: none;
+        margin: 0 auto;
+        margin-top: 2.5rem;
+        margin-bottom: 2.5rem;
+    }
+    .carouselNosotros img{
+        width: 100%;
+    }
+    .TextoNosotros{
+        width: 90%;
+        margin: 0 auto;
+    }
+    .info{
+        width: 95%;
+    }
+    .info h1{
+        font-size: 3.5rem;
+        padding-top: 3rem;
+        padding-bottom: 1rem;
+    }
+    .info p{
+        font-size: 1.7rem;
+    }
+    .info span{
+        color: var(--colorSecundario);
+        font-weight: bold;
+    }
+}
+@media(max-width:820px){
+    .carouselNosotros{
+        width: 70%;
+    }
+    
+}
+
+@media(max-width:480px){
+    .info{
+        width: 95%;
+    }
+    .info h1{
+        font-size: 2.3rem;
+        padding-top: 3rem;
+        padding-bottom: 1rem;
+    }
+    .info p{
+        font-size: 1.2rem;
+    }
+    .carouselNosotros{
+        width: 80%;
+    }
+}

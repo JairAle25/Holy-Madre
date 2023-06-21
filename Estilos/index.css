@@ -1,0 +1,430 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --ColorPrincipal:#6cace4;
+    --ColorBlanco:#ffffff;
+    --ColorNegro:#000000;
+    --ColorDetalles:#89391f;
+    --colorSecundario:#ffcc00;
+}
+/*Le saco la decoracion de los links*/
+a{
+    text-decoration: none;
+}
+@media(max-width:7000px) {
+    /*Elimino la el logo que vamos usar luego
+    en el responsive*/
+    .listaResponsive{
+        display: none;
+    }
+    /*Espaciado de la cabecera*/
+    .cabecera{
+        background-color: var(--ColorBlanco);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 5px 0px;
+        position: sticky;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+        box-shadow: 0px 2px 3px 0px rgba(150, 150, 150, 0.15);
+    -webkit-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.15);
+    }
+    .RedesResponsive{
+        display: none;
+        pointer-events: none;
+    }
+    .logo{
+        width: 100%;
+    }
+    .logoPie{
+        width: 15.5%;
+    }
+    .logoHome{
+        width: 6%;
+        border-radius: 50px;
+    }
+    /*contenedor de los links*/
+    .links{
+        display: flex;
+        gap:2rem;
+        justify-content: center;
+        align-items: center;
+    }
+    /*A cada link le doy estilo*/
+    .links .linkPaginas{
+        font-size: 0.95rem;
+        color: var(--ColorPrincipal);
+        font-weight: 600;
+        transition: all 0.4s ease;
+    }
+    .links .linkPaginas:hover{
+        color: var(--colorSecundario);
+    }
+    .LinkGlovo{
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: var(--ColorBlanco);
+        background-color: var(--ColorPrincipal);
+        border-radius: 5px;
+        padding: 0.3rem 1rem;
+        border: 1px var(--ColorBlanco) solid;
+        transition: all 0.4s ease;
+    }
+    .LinkGlovo:hover{
+        color: var(--colorSecundario);
+    }
+    /*Contenedor de las redes*/
+    .Redes{
+        display: flex;
+        gap: 1rem;
+    }
+    /*Le doy estilo a los logos de redes*/
+    .Redes i{
+        font-size: 1.4rem;
+        color: var(--ColorBlanco);
+        transition: all 0.5s ease;
+    }
+    /*Le doy estilo al contenedor de los logos de redes*/
+    .Redes a{
+        padding: 5px 10px;
+        background-color: var(--ColorPrincipal);
+        border-radius: 20px;
+        transition: all 0.8s ease;
+    }
+    .Redes a:hover i{
+        color: var(--colorSecundario);
+    }
+
+    /*Le doy posicion al carousel*/
+    .carouselposicion{
+        z-index: 0;
+    }
+    .carouselResponsive{
+        display: none;
+        pointer-events: none;
+    }
+    footer{
+        background-color: var(--ColorPrincipal);
+        /* height:15vh; */
+        position: relative;
+        z-index: 1;
+    }
+    .PieDePagina{
+        width: 50%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        /* height: 15vh; */
+    }
+    .PieDePagina i{
+        font-size: 1.6rem;
+        color: var(--ColorPrincipal);
+        transition: all 0.6s ease;
+    }
+    .PieDePagina a{
+        background-color: var(--ColorBlanco);
+        padding: 3px 10px;
+        border-radius: 20px;
+    }
+    .PieDePagina a:hover i{
+        color: var(--colorSecundario);
+    }
+    .imgLocal{
+        width: 100%;
+        /* height: 180vh; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        opacity: 0;
+        margin-top: 7rem;
+    }
+    .imgLocal .abajo{
+        margin-top: 2.5rem;
+    }
+    .visible{
+        opacity: 1;
+        animation: aparecer 2s ease;
+    }
+    @keyframes aparecer {
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+    .contImg{
+        width: 95%;
+        margin: 0 auto;
+        /* height: 80vh; */
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 1.5rem;
+    }
+    .contImg img{
+        width: 30%;
+    }
+
+
+    .ubicacion{
+        width: 95%;
+        margin: 0 auto;
+        /* height: 85vh; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .ubicacion h1{
+        color: var(--ColorPrincipal);
+        font-size: 3rem;
+        font-weight: 600;
+        padding-bottom: 1rem;
+        padding-top: 5rem;
+    }
+    .map{
+        width: 85%;
+        height: 65vh;
+        margin-bottom: 2rem;
+    }
+    .creditos{
+        background-color: var(--colorSecundario);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* height: 5vh; */
+    }
+    .creditos p{
+        margin: 0;
+        font-size: 0.82rem;
+        padding: 1.2rem 0;
+        font-weight: 600;
+        width: 60%;
+        display: flex;
+        justify-content: end;
+    }
+    .creditos a{
+        color: var(--ColorNegro);
+        transition: all 0.5s ease;
+        padding-left: 0.2rem;
+    }
+    .creditos a:hover{
+        font-weight: 600;
+        text-decoration: underline;
+    }
+}
+@media(max-width:1024px){
+    /*Elimino la el logo que vamos usar luego
+    en el responsive*/
+    .listaResponsive{
+        display: inline-block;
+        color: var(--ColorPrincipal);
+        font-size: 1.85rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.5s ease;
+    }
+    /*Espaciado de la cabecera*/
+    .cabecera{
+        padding: 10px 0px;  
+    }
+    .logoPie{
+        width: 15.5%;
+    }
+    .logoHome{
+        width: 10%;
+    }
+    /*contenedor de los links*/
+    .links{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(255, 255, 255,0.8);
+        height: 100vh;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        margin-left: auto;
+        gap: 2.5rem;
+        z-index: -1;
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.5 ease;
+    }
+    /*A cada link le doy estilo*/
+    .links .linkPaginas{
+        font-size: 1.7rem;
+    }
+    .LinkGlovo{
+        font-size: 1.7rem;
+        border: none;
+    }
+    .RedesResponsive{
+        display: flex;
+        pointer-events:unset;
+        gap:1rem;
+    }
+    .RedesResponsive i{
+        font-size: 1.6rem;
+        color: var(--ColorBlanco);
+        transition: all 0.5s ease;
+    }
+    .RedesResponsive a{
+        padding: 5px 10px;
+        background-color: var(--ColorPrincipal);
+        border-radius: 20px;
+        transition: all 0.8s ease;
+    }
+    .RedesResponsive a:hover i{
+        color: var(--colorSecundario);
+    }
+    /*Contenedor de las redes*/
+    .Redes{
+        display: none;
+        pointer-events: none;
+    }
+    .rotarLista{
+        transform: rotate(90deg);
+    }
+    .mostrarLista{
+        opacity: 1;
+        pointer-events: unset;
+        animation: difuminado 0.7s ease;
+    }
+    @keyframes difuminado {
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+    .imgLocal{
+        width: 100%;
+        /* height: 75vh; */
+    }
+    .contImg{
+        width: 90%;
+        /* height: 80vh; */
+    }
+    .contImg img{
+        width: 32%;
+    }
+    .ubicacion h1{
+        font-size: 3.3rem;
+        padding-top: 5rem;
+    }
+    .map{
+        width: 90%;
+    }
+    footer{
+        /* height:10vh; */
+    }
+    .PieDePagina{
+        width: 80%;
+        height: 10vh;
+    }
+    .PieDePagina i{
+        font-size: 1.9rem;
+        color: var(--ColorPrincipal);
+        transition: all 0.6s ease;
+    }
+    .creditos p{
+        margin: 0;
+        font-size: 1rem;
+        font-weight: 600;
+    }
+}
+@media (max-width:480px) {
+    .listaResponsive{
+        font-size: 1.6rem;
+    }
+    .logoHome{
+        width: 13.5%;
+    }
+    .links{
+        height: 100vh;
+        gap: 2rem;
+    }
+    /*A cada link le doy estilo*/
+    .links .linkPaginas{
+        font-size: 1.25rem;
+    }
+    .LinkGlovo{
+        font-size: 1.25rem;
+        border: none;
+    }
+    .RedesResponsive i{
+        font-size: 1.2rem;
+        color: var(--ColorBlanco);
+        transition: all 0.5s ease;
+    }
+    .carouselposicion{
+        display: none;
+        pointer-events: none;
+    }
+    .carouselResponsive{
+        display: block;
+        pointer-events: unset;
+        padding-top: 0rem;
+        z-index: 0;
+    }
+    .imgLocal{
+        width: 100%;
+        /* height: 165vh; */
+    }
+    .contImg{
+        width: 97%;
+        /* height: 165vh; */
+    }
+    .contImg img{
+        width: 72%;
+    }
+    .imgLocal .arriba{
+        display: none;
+        pointer-events: none;
+    }
+    .imgLocal .abajo{
+        flex-direction: column;
+    }
+    footer{
+        /* height:8vh; */
+    }
+    .PieDePagina{
+        width: 80%;
+        height: 8vh;
+    }
+    .PieDePagina i{
+        font-size: 1.3rem;
+        color: var(--ColorPrincipal);
+        transition: all 0.6s ease;
+    }
+    .creditos p{
+        margin: 0;
+        font-size: 0.8rem;
+        font-weight: 600;
+    }
+    .PieDePagina a{
+        background-color: var(--ColorBlanco);
+        padding: 3px 8px;
+        border-radius: 20px;
+    }
+    .ubicacion h1{
+        font-size: 2.6rem;
+    }
+}

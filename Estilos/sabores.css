@@ -1,0 +1,250 @@
+:root{
+    --ColorPrincipal:#6cace4;
+    --ColorBlanco:#ffffff;
+    --ColorNegro:#000000;
+    --ColorDetalles:#89391f;
+    --colorSecundario:#ffcc00;
+}
+@media(max-width:7000px){
+    .SeccionSabores{
+        padding-top: 1.5rem;
+        /* height: 320vh; */
+        background: url(../Imagenes/conitos.png),url(../Imagenes/HeladoChocolate.png);
+        background-repeat: no-repeat,no-repeat;
+        background-position: left top,right top;
+        background-size: 20%,22%;
+    }
+    @keyframes ingresar {
+        0%{
+            right: 200%;
+        }
+        100%{
+            right: 0%;
+        }
+    }
+    @keyframes aparecer {
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+    .textoPrincipal{
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+        padding-top: 1.3rem;
+        padding-bottom: 1.5rem;
+        position: relative;
+        animation: aparecer 2s ease;
+    }
+    .textoPrincipal h1{
+        font-size: 3.2rem;
+        font-weight: 600;
+        color: var(--ColorPrincipal);
+        padding-top: 1.3rem;
+    }
+    .textoPrincipal p{
+        font-size: 1.15rem;
+        padding-top: 1rem;
+        width: 65%;
+        margin: 0 auto;
+    }
+    .Sabores{
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        padding-top: 2rem;
+        width: 75%;
+        margin: 0 auto;
+        position: relative;
+        animation: ingresar 4s ease;
+    }
+    .Sabores img{
+        width: 1.1rem;
+        cursor: pointer;
+    }
+    .Sabores h1{
+        font-size: 1.9rem;
+        font-weight: 600;
+        color: var(--ColorNegro);
+        text-align: center;
+    }
+    
+    .seccion{
+        width: 33%;
+    }
+    .ListaSabores{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        /* height: 40vh; */
+        margin: 0 auto;
+    } 
+    .ListaSabores .line{
+        background-color: var(--colorSecundario);
+        width: 15%;
+        height: 4px;
+    }
+    .ListaSabores p{
+        font-size: 1.1rem;
+        text-align: center;
+    }
+    .abajo{
+        padding-top: 2.5rem;
+    }
+    .Gustos{
+        padding-top: 1.3rem;
+    }
+    .ListaSabores .reco{
+        color: var(--ColorPrincipal);
+    }
+    
+    .custom-tooltip {
+        --bs-tooltip-bg: #71cb30;
+        font-weight: 600;
+        --bs-tooltip-color:var(--ColorNegro)
+    }
+    .contImgsGustos{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* height: 150vh; */
+        margin:  5rem 0rem;
+    }
+    .imgsGustos{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 1.5rem;
+        width: 85%;
+    }
+    .contImgsGustos img{
+        width: 28%;
+        height: 70vh;
+        border-radius: 10px;
+    }
+}
+
+
+@media(max-width:1024px){
+    .SeccionSabores{
+        background-size: 20%,22%;
+    }
+    .textoPrincipal{
+        width: 65%;
+    }
+    .textoPrincipal h1{
+        font-size: 3.9rem;
+        padding-top: 1rem;
+    }
+    .textoPrincipal p{
+        font-size: 1.35rem;
+        padding-top: 1rem;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .Sabores{
+        padding-top: 2.5rem;
+        width: 90%;
+    }
+    .Sabores h1{
+        text-align: center;
+    }
+    .Sabores img{
+        width: 1.4rem;
+    }
+    
+    .ListaSabores .line{
+        width: 20%;
+    }
+    .ListaSabores p{
+        font-size: 1.4rem;
+        text-align: center;
+    }
+    .contImgsGustos{
+        margin:  5rem 0rem;
+    }
+    .imgsGustos{
+        width: 90%;
+    }
+    .contImgsGustos img{
+        width: 28%;
+        height: 38vh;
+    }
+
+}
+@media(max-width:820px){
+    .ListaSabores p{
+        font-size: 1.1rem;
+        text-align: center;
+    }
+}
+
+@media(max-width:480px){
+    .SeccionSabores{
+        padding-top: 0rem;
+        background: none;
+    }
+    .textoPrincipal{
+        width: 90%;
+    }
+    .textoPrincipal h1{
+        font-size: 3.3rem;
+    }
+    .textoPrincipal p{
+        font-size: 1.2rem;
+        width: 95%;
+    }
+    .Sabores{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        animation: ingresar 2s ease;
+    }
+    .Sabores img{
+        width: 1.35rem;
+        cursor: pointer;
+    }
+    .Sabores h1{
+        font-size: 2.2rem;
+        text-align: center;
+    }
+    .resp{
+        padding-top: 1.5rem;
+    }
+    .seccion{
+        width: 90%;
+    }
+    .ListaSabores p{
+        font-size: 1.23rem;
+        text-align: center;
+    }
+    .abajo{
+        padding-top: 2.5rem;
+    }
+    .Gustos{
+        padding-top: 1.3rem;
+    }
+    
+    .imgsGustos{
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+        width: 90%;
+    }
+    .contImgsGustos img{
+        width: 80%;
+        height: 60vh;
+        border-radius: 10px;
+    }
+    .abajoGusto{
+        display: none;
+        pointer-events: none;
+    }
+}

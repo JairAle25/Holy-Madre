@@ -1,0 +1,141 @@
+:root{
+    --ColorPrincipal:#6cace4;
+    --ColorBlanco:#ffffff;
+    --ColorNegro:#000000;
+    --ColorDetalles:#89391f;
+    --colorSecundario:#ffcc00;
+}
+@media(max-width:7000px){
+    .productos{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0 auto;
+        /* height: 215vh; */
+        justify-content: center;
+        align-items: center;
+    }
+    .contProd{
+        display: flex;
+        flex-direction: column;
+        /* height: 100vh; */
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        animation: difuminado 2s ease;
+    }
+    .contProd h1{
+        font-size: 3rem;
+        color:var(--ColorPrincipal) ;
+        font-weight: 600;
+        padding-bottom: 1rem;
+        padding-top: 2rem;
+    }
+    .contProd p{
+        font-size: 1.15rem;
+    }
+    .contProd::before{
+        content: "";
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        position: absolute;
+        background-image: url(/Imagenes/FondoProductos.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        opacity: 0.2;
+        z-index: -1;
+    }
+    .imgsProd{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 65%;
+    }
+    .imgsProd img{
+        width: 30%;
+        border-radius: 5px;
+    }
+    .parrafoSuperior{
+        padding-top: 1.5rem;
+    }
+    .contProd p{
+        width: 75%;
+        text-align: center;
+        
+    }
+    .parrafoInvitacion{
+        color: var(--ColorPrincipal);
+        font-weight: 600;
+        padding-bottom: 3rem;
+    }
+    @keyframes difuminado {
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+}
+
+@media(max-width:1024px){
+
+    .contProd h1{
+        font-size: 3.8rem;
+        text-align: center;
+        padding-top: 3rem;
+    }
+    .imgsProd{
+        width: 95%;
+        justify-content: space-between;
+    }
+    .imgsProd img{
+        width: 30%;
+    }
+    .parrafoSuperior{
+        padding-top: 1.9rem;
+    }
+    .contProd p{
+        width: 90%;
+        text-align: center;
+        font-size: 1.6rem;
+    }
+    .parrafoInvitacion{
+        color: var(--ColorPrincipal);
+        font-weight: 600;
+    }
+}
+
+
+@media(max-width:480px){
+    .productos{
+        width: 95%;
+        /* height: 485vh; */
+    }
+    .contProd h1{
+        font-size: 2.8rem;
+    }
+    .imgsProd{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 90%;
+        /* height: 120vh; */
+        gap: 1.5rem;
+    }
+    .imgsProd img{
+        width: 70%;
+    }
+    .contProd p{
+        width: 95%;
+        text-align: center;
+        font-size: 1.1rem;
+    }
+    .parrafoInvitacion{
+        color: var(--ColorPrincipal);
+        font-weight: 600;
+    }
+}
